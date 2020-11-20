@@ -61,5 +61,5 @@ Releasing
 
 4. The release can then be installed into Django projects like this:
     ```
-    git+https://github.com/Natoora/django-nutrition-core.git@{version number}
+    git+ssh://git@github.com/Natoora/django-nutrition-core.git@{version number}
    ```
