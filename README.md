@@ -57,7 +57,7 @@ Releasing
 
 2. Commit and push changes.
 
-3. Create release on GitHub with the version number.
+3. Create release on GitHub with the version number
 
 4. The release can then be installed into Django projects like this:
     ```
