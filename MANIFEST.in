@@ -1,0 +1,3 @@
+include README.md
+recursive-include nutrition_core/static *
+recursive-include nutrition_core/templates *
