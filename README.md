@@ -40,13 +40,21 @@ How to install django-nutrition-core into your project
     ]
     ```
 
-2. You Custom Customer model will be inheriting from CustomerCore:
+2. You Custom Nutrition model will be inheriting from NutritionCore:
     ```python
-    from nutrition_core.models import NutritionCore
+   from django.db import models
+   from nutrition_core.models import NutritionCore, NutritionItemCore
 
-    class Nutrition(NutritionCore):
-        # your custom attributes and methods
-        pass
+   class Nutrition(NutritionCore):
+       # your custom attributes and methods
+       # e.g:
+       # Product or ProductBase = None
+       pass
+
+   # Important Note: if not necessary to add item by item, use the Nutrition.long_nutrition
+   class NutritionItem(NutritionItemCore):
+       # your custom attributes and methods
+       nutrition = models.ForeignKey(Nutrition, on_delete=models.CASCADE)
     ```
 
 
