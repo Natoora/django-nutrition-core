@@ -1,4 +1,4 @@
-# Customers Core Library
+# Nutrition Core Library
 
 *Nutrition Core is a reusable app and provides the core functionality and attributes*
 

@@ -28,8 +28,8 @@ class NutritionCore(models.Model):
     Nutrition Core model
     """
 
-    long_nutrition_text = models.CharField(
-        max_length=500,
+    list_of_nutrition = models.CharField(
+        max_length=1000,
         null=True,
         blank=True,
         help_text="if you don't want to create relations",
@@ -43,8 +43,8 @@ class NutritionCore(models.Model):
 
     def get_nutrition_items(self):
         # Not using the NutritionItemCore
-        if self.long_nutrition_text:
-            return self.long_nutrition_text
+        if self.list_of_nutrition:
+            return self.list_of_nutrition
 
         # Using NutritionItemCore
         long_form = []
