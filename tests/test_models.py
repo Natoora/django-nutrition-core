@@ -1,20 +1,15 @@
 from django.test import TestCase
 from .factories import NutritionFactory
-from nutrition_core.factories import TypicalValueFactoryCore
-from .models import Nutrition, NutritionItem
-from nutrition_core.models import TypicalValueCore, LabelCore
+from .models import Nutrition
 
 
 class NutritionCoreTestCase(TestCase):
     """ Nutrition Core TestCases """
 
     def setUp(self):
-        # Create TypicalValue
-        self.typical_value1 = TypicalValueFactoryCore.create(name="per 100ml")
-
         # Create Nutrition1 using list_of_nutrition
         self.nutrition1 = NutritionFactory.create(
-            typical_value=self.typical_value1,
+            typical_value=Nutrition.PER_100G,
             list_of_nutrition="fat (10 %), protein (1 g)",
         )
 
