@@ -10,7 +10,7 @@ class NutritionCoreTestCase(TestCase):
         # Create Nutrition1 using list_of_nutrition
         self.nutrition1 = NutritionFactory.create(
             typical_value=Nutrition.PER_100G,
-            list_of_nutrition="fat (10 %), protein (1 g)",
+            nutrition="fat (10 %), protein (1 g)",
         )
 
     # TODO Create Nutrition2 using NutritionItemCore

@@ -11,7 +11,7 @@ class NutritionCore(models.Model):
 
     TYPICAL_VALUE_CHOICES = ((PER_100ML, "100ml"), (PER_100G, "100g"))
 
-    list_of_nutrition = models.TextField(
+    nutrition = models.TextField(
         max_length=1000,
         null=True,
         blank=True,
@@ -25,9 +25,9 @@ class NutritionCore(models.Model):
         abstract = True
 
     def get_nutrition_items(self):
-        # Using the list_of_nutrition
-        if self.list_of_nutrition:
-            return self.list_of_nutrition
+        # Using the nutrition
+        if self.nutrition:
+            return self.nutrition
 
         # Using NutritionItemCore
         long_form = []
